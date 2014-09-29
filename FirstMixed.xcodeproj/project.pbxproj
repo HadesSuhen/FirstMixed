@@ -10,6 +10,11 @@
 		428F4AE619C81D43001F3EB6 /* FirstMixed.h in Headers */ = {isa = PBXBuildFile; fileRef = 428F4AE519C81D43001F3EB6 /* FirstMixed.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		428F4AEC19C81D43001F3EB6 /* FirstMixed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 428F4AE019C81D43001F3EB6 /* FirstMixed.framework */; };
 		428F4AF319C81D43001F3EB6 /* FirstMixedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428F4AF219C81D43001F3EB6 /* FirstMixedTests.swift */; };
+		428F4AFD19C81E32001F3EB6 /* SwiftView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428F4AFC19C81E32001F3EB6 /* SwiftView.swift */; };
+		428F4B0019C81F1F001F3EB6 /* OCView.h in Headers */ = {isa = PBXBuildFile; fileRef = 428F4AFE19C81F1F001F3EB6 /* OCView.h */; };
+		428F4B0119C81F1F001F3EB6 /* OCView.m in Sources */ = {isa = PBXBuildFile; fileRef = 428F4AFF19C81F1F001F3EB6 /* OCView.m */; };
+		428F4B0419C821A5001F3EB6 /* MixedView.h in Headers */ = {isa = PBXBuildFile; fileRef = 428F4B0219C821A5001F3EB6 /* MixedView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		428F4B0519C821A5001F3EB6 /* MixedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 428F4B0319C821A5001F3EB6 /* MixedView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +34,11 @@
 		428F4AEB19C81D43001F3EB6 /* FirstMixedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FirstMixedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		428F4AF119C81D43001F3EB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		428F4AF219C81D43001F3EB6 /* FirstMixedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstMixedTests.swift; sourceTree = "<group>"; };
+		428F4AFC19C81E32001F3EB6 /* SwiftView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftView.swift; sourceTree = "<group>"; };
+		428F4AFE19C81F1F001F3EB6 /* OCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCView.h; sourceTree = "<group>"; };
+		428F4AFF19C81F1F001F3EB6 /* OCView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCView.m; sourceTree = "<group>"; };
+		428F4B0219C821A5001F3EB6 /* MixedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MixedView.h; sourceTree = "<group>"; };
+		428F4B0319C821A5001F3EB6 /* MixedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MixedView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +82,11 @@
 			isa = PBXGroup;
 			children = (
 				428F4AE519C81D43001F3EB6 /* FirstMixed.h */,
+				428F4AFC19C81E32001F3EB6 /* SwiftView.swift */,
+				428F4B0219C821A5001F3EB6 /* MixedView.h */,
+				428F4B0319C821A5001F3EB6 /* MixedView.m */,
+				428F4AFE19C81F1F001F3EB6 /* OCView.h */,
+				428F4AFF19C81F1F001F3EB6 /* OCView.m */,
 				428F4AE319C81D43001F3EB6 /* Supporting Files */,
 			);
 			path = FirstMixed;
@@ -109,7 +124,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				428F4B0419C821A5001F3EB6 /* MixedView.h in Headers */,
 				428F4AE619C81D43001F3EB6 /* FirstMixed.h in Headers */,
+				428F4B0019C81F1F001F3EB6 /* OCView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,6 +227,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				428F4B0519C821A5001F3EB6 /* MixedView.m in Sources */,
+				428F4B0119C81F1F001F3EB6 /* OCView.m in Sources */,
+				428F4AFD19C81E32001F3EB6 /* SwiftView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +340,7 @@
 		428F4AF719C81D43001F3EB6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -329,12 +350,15 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = FirstMixed/OCView.h;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		428F4AF819C81D44001F3EB6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -344,6 +368,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = FirstMixed/OCView.h;
 			};
 			name = Release;
 		};
@@ -398,6 +423,7 @@
 				428F4AF819C81D44001F3EB6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		428F4AF919C81D44001F3EB6 /* Build configuration list for PBXNativeTarget "FirstMixedTests" */ = {
 			isa = XCConfigurationList;
@@ -406,6 +432,7 @@
 				428F4AFB19C81D44001F3EB6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
